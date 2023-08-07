@@ -18,3 +18,18 @@ Our BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-CoThought).
 
 - `CNLU-EG`: Contains the code for the Creative NLU-Example Generation (CNLU-EG).
 - `pretrain`: Contains the code and instructions for pretraining RoBERTa model.
+
+## Citation
+
+If you found the resources in this repository useful, please cite:
+
+```
+@misc{zhang2023babys,
+      title={Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models}, 
+      author={Zheyu Zhang and Han Yang and Bolei Ma and David Rügamer and Ercong Nie},
+      year={2023},
+      eprint={2308.01684},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
