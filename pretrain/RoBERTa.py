@@ -1,21 +1,18 @@
-from pathlib import Path
+import os
+import sys
+import logging
+import json
+import time
+from datetime import datetime
+import torch
 from tokenizers import ByteLevelBPETokenizer
 from transformers import RobertaConfig
 from transformers import RobertaTokenizer
 from transformers import RobertaForMaskedLM
-import torch
 from transformers import LineByLineTextDataset
-import sys
 from transformers import DataCollatorForLanguageModeling
 from transformers import Trainer, TrainingArguments
-import os
-import gc
 from transformers import TrainerCallback
-import logging
-import json
-import time
-
-
 
 ##########################################
 
@@ -66,7 +63,8 @@ if __name__ == "__main__":
     path_output_model   = f"{output_path}/RoBERTa-{output_path_suffix}"
     # path_output_linear  = f"{output_path}/linear-{output_path_suffix}"
 
-    # device, Note: here I used Trainer. Thus NO need to model.to(device), @see: customTrainingArguments
+    # device, Note: here used huggingface Trainer. 
+    # Thus no need to model.to(device), @see: customTrainingArguments
     if config_json["device"] == "undefine":
         device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu') 
     else:
@@ -129,8 +127,6 @@ if __name__ == "__main__":
 
     dataset_train = LineByLineTextDataset(
         tokenizer   = tokenizer,
-        #  file_path='./babylm_data_test/babylm_10M/aochildes.train',
-        # file_path='./babylm_data/babylm_10M/all10.train',
         file_path   = config_json['path_data_train'],
         block_size  = 128,
     )
@@ -139,8 +135,6 @@ if __name__ == "__main__":
     logging.debug(f"loading dev dataset ...")
     dataset_dev = LineByLineTextDataset(
         tokenizer   = tokenizer,
-        #  file_path='../babylm_data_test/babylm_10M/aochildes.train',
-        # file_path   = './babylm_data/babylm_dev/all.dev',
         file_path   = config_json['path_data_dev'],
         block_size  = 128,
     )
@@ -155,12 +149,14 @@ if __name__ == "__main__":
 
     ##########################################
     # Trainer
-    # Note 1: here I used Trainer
-    #         originally it will use ALL GPUs, but it is bad
-    #         the following class is almost the only elegent way to use a specific GPU
-    #         If you want to use all GPU, you can just call training_args = TrainingArguments()
-    # Note 2: I also used custom callback function, to make loggings
-    #         originally function doesn't work at all :-(
+    # Note 1: Trainer will automatically allocate ALL GPUs, 
+    #         in order to friendly use a public scientific server
+    #         here used a `customTrainingArguments`,
+    #         in order to specify a certain GPU
+    #         this is one elegent trick on jupyter notebook,
+    #         another way to specify GPU with:
+    #         `CUDA_VISIBLE_DEVICES=0,2,3 python code.py`  
+    # Note 2: used `custom callback function`, to make loggings
     ##########################################
 
     class customTrainingArguments(TrainingArguments):
@@ -180,19 +176,12 @@ if __name__ == "__main__":
         output_dir                  = output_path,
         num_train_epochs            = config_json["num_epochs"],
         seed                        = seed,
-
         overwrite_output_dir        = True,
-        # evaluation_strategy         = "epoch",
         per_device_train_batch_size = config_json["per_device_train_batch_size"],
         save_steps                  = config_json["logging_per_n_step"],
         save_total_limit            = 2,
-        #  logging_dir              = './log',  # useless?
-        #  log_level                = 'warning',
-        logging_strategy            = "steps", # "epoch"
-        #  logging_steps            = 1,
-        # logging_strategy            = "epoch",
+        logging_strategy            = "steps",
         logging_first_step          = True,
-        #  no_cuda                  = True,
     )
 
 
