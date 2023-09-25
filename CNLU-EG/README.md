@@ -4,4 +4,3 @@ CNLU-EG is a method for creatively generating Natural Language Understanding (NL
 
 This process assists in training smaller models to learn more effectively. 
 
-This method is inspired by the Tree-of-thought's creative writing, as described by [citation](https://github.com/princeton-nlp/tree-of-thought-llm).
