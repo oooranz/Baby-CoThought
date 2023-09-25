@@ -6,12 +6,24 @@ Use the following command to pretrain RoBERTa:
 python RoBERTa.py RoBERTa_config.json
 ```
 
-## Parameters in 'RoBERTa_config.json' 
+## Content
+
+file `RoBERTa.py` is our code for (pre)training a RoBERTa model. 
+
+file `RoBERTa_config.json` is its config file. Note: do now write any comment in this file. 
+
+this will create a folder to save trained model, and logging file.
+
+The logging file will record the configuration, and the training steps.
+
+for training dataset and tokenizer, please find them on huggingface.
+
+## Parameters in `RoBERTa_config.json` 
 
 | Parameter                       | Description                                           |
 | ------------------------------- | ----------------------------------------------------- |
 | "seed": 0                       | The random seed number. |
-| "device": "cuda:1"              | The GPU device number. Note: This configuration uses Huggingface's Trainer, which by default uses **all** GPUs for training. We modified it to use only one specific GPU. If you need to use all GPUs like the default setting, modify `class customTrainingArguments` or `training_args = TrainingArguments`. |
+| "device": "cuda:1"              | The GPU device number. Note: This configuration uses Huggingface's Trainer, which by default uses **all** GPUs for training. We used customTrainingArguments to specify a certain GPU, for a friendly allocation on a public scientific server shared with colleagues. If you need to use all GPUs like the default setting, replace `class customTrainingArguments` with `training_args = TrainingArguments`. |
 | "num_epochs": 5                 | The number of epochs for training. |
 | "max_seq_length": 512           | The maximum sequence length. This is a parameter for `RobertaTokenizer.from_pretrained`. |
 | "per_device_train_batch_size" : 32 | The batch size per device. This is a parameter for `training_args`. |
@@ -26,3 +38,5 @@ python RoBERTa.py RoBERTa_config.json
 | "model_type_vocab_size": 1      | The type vocabulary size. This is a parameter for Roberta. |
 | "path_folder_prefix": ""        | The prefix for the output folder. |
 | "mlm_probability": 0.15         | The masked language model probability. |
+
+have fun with coding :-)
