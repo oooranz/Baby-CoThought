@@ -18,7 +18,7 @@ Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-
 
 - `CNLU-EG`: Contains the code for the Creative NLU-Example Generation (CNLU-EG).
 - `pretrain`: Contains the code and instructions for pretraining RoBERTa model.
-- `eval`: Contains the code for a shared evaluation pipeline.
+- `eval`: Contains the code for a shared evaluation pipeline from [Warstadt et al. (2023)](https://arxiv.org/abs/2301.11796).
 
 ## Creative NLU-Example Generation
 1. Download [babylm_data](https://github.com/babylm/babylm.github.io/raw/main/babylm_data.zip), run `./CNLU-EG/data/text/cat_data.py` to merge them.
