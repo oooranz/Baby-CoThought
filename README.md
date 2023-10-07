@@ -52,12 +52,12 @@ Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-
 If you found the resources in this repository useful, please cite:
 
 ```
-@misc{zhang2023babys,
-      title={Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models}, 
-      author={Zheyu Zhang and Han Yang and Bolei Ma and David Rügamer and Ercong Nie},
-      year={2023},
-      eprint={2308.01684},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{zhang-et-al-2023-babys,
+    author = {Zheyu Zhang and Han Yang and Bolei Ma and David Rügamer and Ercong Nie},
+    title = {Baby's {C}o{T}hought: {L}everaging Large Language Models for Enhanced Reasoning in Compact Models},
+    booktitle = {Proceedings of the {B}aby{LM} {C}hallenge},
+    year = {2023},
+    month = {December},
+    publisher = {Association for Computational Linguistics (ACL)},
 }
 ```
