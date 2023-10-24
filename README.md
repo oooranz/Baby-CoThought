@@ -2,7 +2,7 @@
 
 This repository contains the code for the paper: 
 
->[Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models](https://arxiv.org/pdf/2308.01684v1.pdf). 
+>[Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models](https://arxiv.org/abs/2308.01684). 
 
 In this work, we apply our "CoThought" pipeline to pretrain a Baby Language Model (BabyLM) with human-like smaller corpus data.
 
