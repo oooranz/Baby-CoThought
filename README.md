@@ -1,10 +1,8 @@
 # Baby-CoThought
 
-[![AP](https://img.shields.io/badge/arXiv-Preprint-blue)](https://arxiv.org/abs/2308.01684)
-
 This repository contains the code for the paper: 
 
->[Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models](https://arxiv.org/abs/2308.01684). 
+>[Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models](https://aclanthology.org/2023.conll-babylm.13/). 
 
 In this work, we apply our "CoThought" pipeline to pretrain a Baby Language Model (BabyLM) with human-like smaller corpus data.
 
