@@ -54,12 +54,36 @@ Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-
 If you found the resources in this repository useful, please cite:
 
 ```
-@inproceedings{zhang-et-al-2023-babys,
-    author = {Zheyu Zhang and Han Yang and Bolei Ma and David Rügamer and Ercong Nie},
-    title = {Baby's {C}o{T}hought: {L}everaging Large Language Models for Enhanced Reasoning in Compact Models},
-    booktitle = {Proceedings of the {B}aby{LM} {C}hallenge},
-    year = {2023},
-    month = {December},
-    publisher = {Association for Computational Linguistics (ACL)},
+Export citation
+×
+BibTeX
+MODS XML
+Endnote
+Preformatted
+@inproceedings{zhang-etal-2023-babys,
+    title = "Baby{'}s {C}o{T}hought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models",
+    author = {Zhang, Zheyu  and
+              Yang, Han  and
+              Ma, Bolei  and
+              R{\"u}gamer, David  and
+              Nie, Ercong},
+    editor = "Warstadt, Alex  and
+              Mueller, Aaron  and
+              Choshen, Leshem  and
+              Wilcox, Ethan  and
+              Zhuang, Chengxu  and
+              Ciro, Juan  and
+              Mosquera, Rafael  and
+              Paranjabe, Bhargavi  and
+              Williams, Adina  and
+              Linzen, Tal  and
+              Cotterell, Ryan",
+    booktitle = "Proceedings of the BabyLM Challenge at the 27th Conference on Computational Natural Language Learning",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.conll-babylm.13",
+    pages = "130--142",
 }
 ```
