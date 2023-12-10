@@ -54,12 +54,6 @@ Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-
 If you found the resources in this repository useful, please cite:
 
 ```
-Export citation
-×
-BibTeX
-MODS XML
-Endnote
-Preformatted
 @inproceedings{zhang-etal-2023-babys,
     title = "Baby{'}s {C}o{T}hought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models",
     author = {Zhang, Zheyu  and
