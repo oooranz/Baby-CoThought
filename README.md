@@ -1,5 +1,9 @@
 # Baby-CoThought
 
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/yaanhaan/Baby-CoThought)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Data-green)](https://huggingface.co/datasets/yaanhaan/Baby-CoThought-Data)
+[![arXiv](https://img.shields.io/badge/arXiv-2305.12182-b31b1b.svg)](https://arxiv.org/abs/2308.01684)
+
 This repository contains the code for the paper: 
 
 >[Baby's CoThought: Leveraging Large Language Models for Enhanced Reasoning in Compact Models](https://aclanthology.org/2023.conll-babylm.13/). 
@@ -9,8 +13,6 @@ In this work, we apply our "CoThought" pipeline to pretrain a Baby Language Mode
 The pretraining data is provided by [Warstadt et al. (2023)](https://arxiv.org/abs/2301.11796) in the framework of the [BabyLM Challenge](https://babylm.github.io/), which has the goal of sample-efficient pretraining on a developmentally plausible corpus at a small human-like data scale.
 
 The restructured data for BabyLM pretraining is available [here](https://huggingface.co/datasets/yaanhaan/Baby-CoThought-Data).
-
-Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-CoThought).
 
 ![](./figures/baby-cothought.png)
 
@@ -28,7 +30,7 @@ Our pre-trained BabyLM is available [here](https://huggingface.co/yaanhaan/Baby-
     python cat_data.py merged_data.txt text.txt
     ```
    Then we can get the raw data for the next step.
-2. Use LLMs to generate the new dataset consists of NLU-Examples.
+2. Use LLMs to generate the new dataset consisting of NLU-Examples.
     ```bash
     cd ./CNLU-EG/scripts/text
     bash cot_sampling.sh
