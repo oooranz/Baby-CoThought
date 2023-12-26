@@ -12,8 +12,6 @@ In this work, we apply our "CoThought" pipeline to pretrain a Baby Language Mode
 
 The pretraining data is provided by [Warstadt et al. (2023)](https://arxiv.org/abs/2301.11796) in the framework of the [BabyLM Challenge](https://babylm.github.io/), which has the goal of sample-efficient pretraining on a developmentally plausible corpus at a small human-like data scale.
 
-The restructured data for BabyLM pretraining is available [here](https://huggingface.co/datasets/yaanhaan/Baby-CoThought-Data).
-
 ![](./figures/baby-cothought.png)
 
 ## Contents
