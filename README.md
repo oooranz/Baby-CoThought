@@ -2,7 +2,7 @@
 
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/yaanhaan/Baby-CoThought)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Data-green)](https://huggingface.co/datasets/yaanhaan/Baby-CoThought-Data)
-[![arXiv](https://img.shields.io/badge/arXiv-2305.12182-b31b1b.svg)](https://arxiv.org/abs/2308.01684)
+[![arXiv](https://img.shields.io/badge/arXiv-2308.01684-b31b1b.svg)](https://arxiv.org/abs/2308.01684)
 
 This repository contains the code for the paper: 
 
